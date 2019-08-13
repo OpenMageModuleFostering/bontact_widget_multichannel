@@ -1,0 +1,18 @@
+<div >
+
+<?php if($this->getWidgetId() != "") 
+{	
+?>
+<script type='text/javascript'>
+			var bontactCustomer = '<?php echo $this->getWidgetId(); ?>';
+			var locationRoot = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+			var newElem = document.createElement('script');
+			newElem.setAttribute('src', locationRoot+'dashboard.bontact.com/widget/bontact.script.js');
+			newElem.setAttribute('type', 'text/javascript');
+			document.getElementsByTagName('head')[0].appendChild(newElem);
+		</script>
+<?php
+}
+?>
+ 
+</div>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Bontact_Widget_Multichannel",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Engage visitors with a multi-channel communication widget that includes live chat, callback, text messages, and email. Increase their satisfaction and your conversion rates.",
+    "authors": [
+    {
+        "name": "Tzvi",
+        "email": "tzvi@bontact.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

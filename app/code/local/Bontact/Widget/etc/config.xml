@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bontact_Widget>
+            <version>0.1.0</version>
+        </Bontact_Widget>
+    </modules>
+	 <global>
+	 <blocks>
+			<bontact>
+				<class>Bontact_Widget_Block</class>
+			</bontact>
+		</blocks>
+		<models>
+            <bontact>
+                <class>Bontact_Widget_Model</class>
+                <resourceModel>bontact_mysql4</resourceModel>
+            </bontact>
+            <bontact_mysql4>
+                <class>Bontact_Widget_Model_Mysql4</class>
+                <entities>
+                    <bontact>
+                        <table>bontact</table>
+                    </bontact>
+                </entities>
+            </bontact_mysql4>
+        </models>
+<resources>
+            <bontact_setup>
+                <setup>
+                    <module>Bontact_Widget</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bontact_setup>
+            <bontact_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bontact_write>
+            <bontact_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bontact_read>
+        </resources>
+    </global>
+	    <frontend>
+        <routers>
+            <Bontact_Widget>
+                <use>standard</use>
+                <args>
+                    <module>Bontact_Widget</module>
+                    <frontName>bontact</frontName>
+                </args>
+            </Bontact_Widget>
+        </routers>
+        <layout>
+            <updates>
+                <Bontact_Widget>
+                    <file>bontact.xml</file>
+                </Bontact_Widget>
+            </updates>
+        </layout>
+     </frontend>
+    <admin>
+       <routers>
+            <Bontact_Widget>
+                <use>admin</use>
+                <args>
+                    <module>Bontact_Widget</module>
+                    <frontName>bontact</frontName>
+                </args>
+            </Bontact_Widget>
+       </routers>
+    </admin>
+	<adminhtml>
+		<menu>
+	        <bontact translate="title" module="Widget">
+	   	        <title>Bontact Multi Channel</title>
+    	        <sort_order>1000</sort_order>
+            	<children>
+                	<accountconfig translate="title" module="Widget">
+    	                <title>Account Setup</title>
+                        <action>bontact/admin/accountconfig</action>
+        	            <sort_order>0</sort_order>
+            	    </accountconfig>
+					<dashboard translate="title" module="Widget">
+	                    <title>Dashboard</title>
+                        <action>bontact/admin/dashboard</action>
+	                    <sort_order>40</sort_order>
+	                </dashboard>
+    	        </children>
+        	</bontact>
+		</menu>
+    <acl>
+      <resources>
+        <admin>
+          <children>
+            <bontact translate="title" module="Widget">
+                <title>Bontact Multi Channel</title>
+                <sort_order>1000</sort_order>
+                <children>
+                    <accountconfig translate="title" module="Widget">
+                        <title>Account Setup</title>
+                        <action>bontact/admin/accountconfig</action>
+                        <sort_order>0</sort_order>
+                    </accountconfig>
+                    <dashboard translate="title" module="Widget">
+                        <title>Dashboard</title>
+                        <action>bontact/admin/dashboard</action>
+                        <sort_order>40</sort_order>
+                    </dashboard>
+                </children>
+            </bontact>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+	</adminhtml>
+</config>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package>
+    <name>Bontact_Widget_Multichannel</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Engage visitors with a multi-channel communication widget that includes live chat, callback, text messages, and email. Increase their satisfaction and your conversion rates.</summary>
+    <description>Bontact is a smart, multi-channel communication tool that converts your site visitors into paying customers. Our clean and customizable widget hovers neatly over your site and provides visitors with live chat, callback, text, and email options. With our online dashboard, you can manage all of your interactions, as well as monitor where visitors are and how long they’ve been surfing. If you feel that they need assistance at any point, step in and initiate a live chat.
+
+With Bontact, you’re offering your visitors flexible and accessible support, while transforming them into happy customers.
+**Widget Options on Your Site**
+
+* Callback – After visitors enter their phone number (landline or mobile, from anywhere in the world), they’re automatically called back within seconds and connected with you. This call is free for visitors. 
+* Live Chat – Visitors can initiate a chat with with you in real time.
+* Text Message - Visitors can send a free international text message to your phone. You can reply to them directly, without international fees.
+* Email – Visitors fill out a form that’s sent directly to your inbox.
+
+**Live Chat Options in Your Dashboard**
+
+* Invite visitors to a live chat session
+* Easily manage all ongoing chats
+* Reply to visitor-initiated chats
+* Transfer chats between representatives
+* Incorporate templates
+* Print transcripts</description>
+    <notes></notes>
+    <authors><author><name>Tzvi</name><user>Tzvi</user><email>tzvi@bontact.com</email></author><author><name>Support</name><user>Support</user><email>tzvi@bontact.com</email></author></authors>
+    <date>2015-11-20</date>
+    <time>18:10:00</time>
+    <contents><target name="magelocal">
+	<dir name="Bontact">
+	<dir name="Widget">
+	<dir name="Block"><file name="Status.php" hash="869902090c3d30269cb625aaa214f60d"/><file name="Accountconfig.php" hash="d51bb60d8831e381459cc36998a2e327"/></dir>
+	<dir name="Model"><file name="Bontact.php" hash="ccf6bbcd9ea94896ca5a7d6137075c52"/><dir name="Mysql4"><dir name="Bontact"><file name="Collection.php" hash="3ee88b6ddcb22dd5dc2297e0abe0cae6"/></dir><file name="bontact.php" hash="52622d7e492861ab7fdbce1d6c2a78f8"/></dir></dir>
+	<dir name="controllers"><file name="AdminController.php" hash="cef6dac96a6c55eadb6d7d64f6308c82"/><file name="IndexController.php" hash="a518f58e5515481c4eedad459f645818"/><file name="bontact.phtml" hash="5be7ae80d82a13a50d4bb267166ce4cd"/></dir>
+	<dir name="etc"><file name="config.xml" hash="3b11e7336f469f7a34c110c4865cc890"/></dir>
+	<dir name="sql"><dir name="bontact_setup"><file name="mysql4-install-0.1.0.php" hash="1ae4322bb7e5fd13f04bb6669e975153"/></dir></dir>
+	</dir></dir></target>
+	<target name="mageetc"><dir name="modules"><file name="Bontact_Widget.xml" hash="441bbbace9e216eed5c126bc23bfbb69"/></dir></target>
+	<target name="magedesign"><dir name="frontend">
+	<dir name="base"><dir name="default">
+	<dir name="layout"><file name="bontact.xml" hash="837425ee30eacbbca4fb2506805cb5d0"/></dir>
+	<dir name="template"><dir name="bontact"><file name="status.phtml" hash="d0fa95dda0acc1744eed5b20f3bd27dd"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>4.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
